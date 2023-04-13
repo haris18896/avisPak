@@ -21,37 +21,17 @@ function App() {
       });
   }, []);
 
-  console.log('fcmtoken to be sent : ', fcmtoken);
-
-  useEffect(() => {
-    if (webviewRef.current) {
-      const injectScript = `
-        if (window.onFcmtokenReceived) {
-          window.onFcmtokenReceived('${fcmtoken}');
-        }
-      `;
-      webviewRef.current.injectJavaScript(injectScript);
-    }
-  }, [fcmtoken]);
+  function senDataToWebView() {
+    webviewRef.current.postMessage(`${fcmtoken}`);
+  }
 
   return (
     <WebView
-      source={{uri: 'https://csm.tmpl.pk/'}}
-      // source={{uri: 'http://192.168.8.101:3000/'}}
+      // source={{uri: 'https://csm.tmpl.pk/'}}
+      source={{uri: 'http://192.168.8.101:3000/'}}
       originWhitelist={['*']}
       ref={webviewRef}
-      onMessage={event => {
-        const message = JSON.parse(event.nativeEvent.data);
-        if (message.type === 'checkFcmtoken') {
-          const isValid = fcmtoken !== '';
-          webviewRef.current.postMessage(
-            JSON.stringify({
-              type: 'fcmtokenCheck',
-              data: isValid,
-            }),
-          );
-        }
-      }}
+      onMessage={event => {}}
     />
   );
 }

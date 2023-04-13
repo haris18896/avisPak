@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "57474691883",
+    "project_id": "avis-95b38",
+    "storage_bucket": "avis-95b38.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57474691883:android:31a4dee45a27bf3a73cb6e",
+        "android_client_info": {
+          "package_name": "com.avispak"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57474691883-2t57p1ca3460kn5p9bq5jrukh6svdjle.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACLDP_Cqlk70n8QhXKPGYq1ph0RYrI0uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57474691883-2t57p1ca3460kn5p9bq5jrukh6svdjle.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
